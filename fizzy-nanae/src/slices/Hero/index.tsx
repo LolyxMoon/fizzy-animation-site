@@ -9,9 +9,7 @@ import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect } from "react";
-
-gsap.registerPlugin(useGSAP, ScrollTrigger);
+import { useEffect, useLayoutEffect } from "react";
 
 /**
  * Props for `Hero`.
@@ -22,6 +20,13 @@ export type HeroProps = SliceComponentProps<Content.HeroSlice>;
  * Component for "Hero" Slices.
  */
 const Hero = ({ slice }: HeroProps): JSX.Element => {
+  const useIsomorphicLayoutEffect =
+    typeof window !== "undefined" ? useLayoutEffect : useEffect;
+
+  useIsomorphicLayoutEffect(() => {
+    gsap.registerPlugin(useGSAP, ScrollTrigger);
+  });
+
   useGSAP(() => {
     const introTl = gsap.timeline();
 

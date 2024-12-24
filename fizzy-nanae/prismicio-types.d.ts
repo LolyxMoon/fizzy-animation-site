@@ -4,7 +4,7 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type PageDocumentDataSlicesSlice = HeroSlice;
+type PageDocumentDataSlicesSlice = SkyDiveSlice | HeroSlice;
 
 /**
  * Content for Page documents
@@ -191,6 +191,35 @@ type HeroSliceVariation = HeroSliceDefault;
 export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
 
 /**
+ * Primary content in *SkyDive → Default → Primary*
+ */
+export interface SkyDiveSliceDefaultPrimary {
+  /**
+   * Sentence field in *SkyDive → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: sky_dive.default.primary.sentence
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  sentence: prismic.KeyTextField;
+
+  /**
+   * flavor field in *SkyDive → Default → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: lemonLime
+   * - **API ID Path**: sky_dive.default.primary.flavor
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  flavor: prismic.SelectField<
+    "lemonLime" | "grape" | "blackCherry" | "strawberryLemonade" | "watermelon",
+    "filled"
+  >;
+}
+
+/**
  * Default variation for SkyDive Slice
  *
  * - **API ID**: `default`
@@ -199,7 +228,7 @@ export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
  */
 export type SkyDiveSliceDefault = prismic.SharedSliceVariation<
   "default",
-  Record<string, never>,
+  Simplify<SkyDiveSliceDefaultPrimary>,
   never
 >;
 
@@ -250,6 +279,7 @@ declare module "@prismicio/client" {
       HeroSliceVariation,
       HeroSliceDefault,
       SkyDiveSlice,
+      SkyDiveSliceDefaultPrimary,
       SkyDiveSliceVariation,
       SkyDiveSliceDefault,
     };

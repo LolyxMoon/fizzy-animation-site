@@ -11,6 +11,7 @@ import clsx from "clsx";
 import { WavyCircles } from "./WavyCircles";
 import { Group } from "three";
 import gsap from "gsap";
+import { Bounded } from "@/components/Bounded";
 
 const SPINS_ON_CHANGE = 8;
 

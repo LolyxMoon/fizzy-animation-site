@@ -1,3 +1,8 @@
+
+Live Site URL
+https://fizzy-animation-site-8iql-gqf5jx2kg-nanae-js-projects.vercel.app/
+
+
 https://prismic.io/courses/fizzi-3d-website#-assets
 
 http://localhost:3000/

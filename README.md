@@ -1,29 +1,74 @@
 
-Live Site URL
-https://fizzy-animation-site-8iql-gqf5jx2kg-nanae-js-projects.vercel.app/
+## 使用技術一覧
+
+<div style="display: inline">
+
+  <!-- フロントエンドのフレームワーク一覧 -->
+  <a href="https://nodejs.org/ja">
+  <img src="https://img.shields.io/badge/-Node.js-000000.svg?logo=node.js&style=for-the-badge">
+  </a>
+  <a href="https://nextjs.org/">
+  <img src="https://img.shields.io/badge/-Next.js-blue.svg?logo=next.js&style=for-the-badge">
+  </a>
+  <!-- フロントエンドの言語 -->
+  <a href="http://ja.react.dev/">
+  <img src="https://img.shields.io/badge/-React-23272f.svg?logo=react&style=for-the-badge">
+  </a>
+  <a href="https://www.typescriptlang.org/">
+  <img src="https://img.shields.io/badge/-Typescript-FFF.svg?logo=typescript&style=for-the-badge">
+  </a>  
+  <!-- ミドルウェア -->
+  <a href="https://prismic.io/">
+  <img src="https://img.shields.io/badge/-Prismic-484A7A.svg?logo=prismic&style=for-the-badge">
+  </a>
+
+</div>
+
+#### 使用ライブラリ
+
+<div>
+  <!-- 使用ライブラリ -->
+  <p><a href="https://prismic.io/">prismic</a></p>
+  <p><a href="https://gsap.com/">GSAP</a></p>
+  <p><a href="https://r3f.docs.pmnd.rs/getting-started/introduction">r3f</a></p>
+  <p><a href="https://drei.docs.pmnd.rs/getting-started/introduction">Drei</a></p>
+  <p><a href="https://tailwindcss.com/">tailwindcss</a></p>
+</div>
+
+## 目次
+
+1. [プロジェクトについて](#プロジェクトについて)
+2. [開発環境構築](#開発環境構築)
 
 
-https://prismic.io/courses/fizzi-3d-website#-assets
+## プロジェクトについて
 
-http://localhost:3000/
+<p align="right">(<a href="#top">トップへ</a>)</p>
 
-Slice Machine
-http://localhost:9999/
+<!-- プロジェクトの概要を記載 -->
+<p>
+  このサイトはNext.jsとThree.js (react-three-fiber/r3f)を組み合わせたサイト制作を学ぶためにPrismicより配信されたyoutubeを見ながら作成しました。<br />
+  インタラクティブな体験を提供できるUI/UXについて学びながら、ユーザーに魅力的なウェブサイトを提供することを目指しました。<br />
+  また、コンテンツ管理システムとしてPrismicを活用し、効率的なコンテンツ更新のワークフローについても習得しました。
+</p>
 
-prismic
-https://fizzy-nanae.prismic.io/builder/working?language=en-us
+### 苦労したところ
 
-Live site
-https://fizzi.vercel.app/
+### 制作後の振り返り
 
-npx @slicemachine/init@latest --repository fizzy-nanae --starter nextjs-starter-prismic-minimal
 
-npm run dev
+<p align="right">(<a href="#top">トップへ</a>)</p>
 
-tailwindcss
-prettier
-clsx
+## 開発環境構築
 
+### prismic
+<a href="https://fizzy-nanae.prismic.io/builder/working?language=en-us">ダッシュボード</a>
+
+### ローカル環境
+
+<a href="http://localhost:3000/" target="_blank">フロント(Next)</a>
+
+<a href="http://localhost:9999/" target="_blank">CMS(prismic - Slice Machine)</a>
 
 ----------------
 # Prismic + Next.js Minimal Starter
